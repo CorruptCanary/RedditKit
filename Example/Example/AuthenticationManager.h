@@ -22,7 +22,7 @@
 
 typedef void(^AuthenticationSuccessBlock)();
 
-@interface AuthenticationManager : NSObject <UIAlertViewDelegate, UIActionSheetDelegate>
+@interface AuthenticationManager : NSObject <UIAlertViewDelegate>
 
 - (void)showSignInAlertViewWithCompletion:(AuthenticationSuccessBlock)completion;
 
