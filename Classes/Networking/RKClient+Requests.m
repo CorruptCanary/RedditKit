@@ -27,6 +27,32 @@
 
 @implementation RKClient (Requests)
 
+- (NSURLSessionDataTask *)basicPostAndResponseTaskWithPath:(NSString *)path parameters:(NSDictionary *)parameters completion:(RKObjectCompletionBlock)completion
+{
+    NSParameterAssert(path);
+    
+    if (![self isSignedIn])
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (completion)
+            {
+                completion(nil, [RKClient authenticationRequiredError]);
+            }
+        });
+        
+        return nil;
+    }
+    
+    return [self postPath:path parameters:parameters completion:^(NSHTTPURLResponse *response, id responseObject, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (completion)
+            {
+                completion(responseObject, error);
+            }
+        });
+    }];
+}
+
 - (NSURLSessionDataTask *)basicPostTaskWithPath:(NSString *)path parameters:(NSDictionary *)parameters completion:(RKCompletionBlock)completion
 {
     NSParameterAssert(path);

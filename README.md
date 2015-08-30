@@ -1,6 +1,6 @@
 # RedditKit [![Build Status](https://travis-ci.org/samsymons/RedditKit.svg?branch=master)](https://travis-ci.org/samsymons/RedditKit)
 
-RedditKit is a [reddit API](http://www.reddit.com/dev/api) wrapper, written in Objective-C.
+RedditKit is a [reddit API](http://www.reddit.com/dev/api) wrapper, written in Objective-C. This fork merges the work of @pyro2927 into the latest version. The example project explicitly doesn't contain an example oauth workflow.
 
 ## Documention
 
@@ -12,7 +12,7 @@ Documentation for RedditKit is [available on CocoaDocs](http://cocoadocs.org/doc
 
 Add this to your Podfile:
 
-	pod 'RedditKit', '~> 1.3'
+	pod 'RedditKit', :git => 'https://github.com/CorruptCanary/RedditKit', :branch => 'master'
 
 Then run:
 
