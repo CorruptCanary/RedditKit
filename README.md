@@ -1,6 +1,6 @@
 # RedditKit [![Build Status](https://travis-ci.org/samsymons/RedditKit.svg?branch=master)](https://travis-ci.org/samsymons/RedditKit)
 
-RedditKit is a [reddit API](http://www.reddit.com/dev/api) wrapper, written in Objective-C. This fork merges the work of @pyro2927 into the latest version. The example project explicitly doesn't contain an example oauth workflow.
+RedditKit is a [reddit API](http://www.reddit.com/dev/api) wrapper, written in Objective-C. This fork merges the work of [@pyro2927](https://github.com/pyro2927) into the latest version. The example project explicitly doesn't contain an example oauth workflow.
 
 ## Documention
 
@@ -22,7 +22,7 @@ Then run:
 
 **Adding RedditKit:**
 
-1. Add RedditKit as a git submodule of your project: `git submodule add https://github.com/samsymons/RedditKit.git`
+1. Add RedditKit as a git submodule of your project: `git submodule add https://github.com/CorruptCanary/RedditKit.git`
 2. Fetch its dependencies with `git submodule update --init --recursive`
 
 **Adding AFNetworking:**
